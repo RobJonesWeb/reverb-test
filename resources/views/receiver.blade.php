@@ -11,10 +11,12 @@
 <body>
 <h1> Laravel Echo / Reverb Receiver</h1>
 <script>
-    console.log('really running')
+    console.log('Loaded')
     document.addEventListener("DOMContentLoaded", (event) => {
+        console.log('DomContentLoaded')
         window.Echo.channel('reverb')
             .listen('.reverb.sent', (e) => {
+                console.log('reverb notifier')
                 console.log(e.message);
             });
     });
